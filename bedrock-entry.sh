@@ -39,6 +39,9 @@ case ${VERSION^^} in
   1.16)
     VERSION=1.16.20.03
     ;;
+  1.17)
+    VERSION=1.17.2.01
+    ;;
   LATEST)
     for a in data-bi-prtid data-platform; do
       for i in {1..3}; do

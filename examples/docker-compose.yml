@@ -1,7 +1,9 @@
-version: '3.4'
-
+version: '3.9'
 services:
   bds:
+    build:
+        context: ../
+        dockerfile: Dockerfile
     image: itzg/minecraft-bedrock-server
     environment:
       EULA: "TRUE"
@@ -10,9 +12,6 @@ services:
     ports:
       - 19132:19132/udp
     volumes:
-      - bds:/data
+      - ./data:/data
     stdin_open: true
     tty: true
-
-volumes:
-  bds: {}
