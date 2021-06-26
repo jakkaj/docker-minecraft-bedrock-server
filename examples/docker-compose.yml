@@ -1,8 +1,9 @@
 version: '3.9'
 services:
   bds:
+    restart: always
     build:
-        context: ../
+        context: ../GitHub/docker-minecraft-bedrock-server
         dockerfile: Dockerfile
     image: itzg/minecraft-bedrock-server
     environment:
