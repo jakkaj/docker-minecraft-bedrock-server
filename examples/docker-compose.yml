@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   bds:
-    restart: always
+    restart: unless-stopped
     build:
         context: ../
         dockerfile: Dockerfile
@@ -13,6 +13,22 @@ services:
     ports:
       - 19132:19132/udp
     volumes:
-      - ./data:/data
+      - /data/minecraft:/data
     stdin_open: true
     tty: true
+  # bds2:
+  #   restart: unless-stopped
+  #   build:
+  #       context: ../
+  #       dockerfile: Dockerfile
+  #   image: itzg/minecraft-bedrock-server
+  #   environment:
+  #     EULA: "TRUE"
+  #     GAMEMODE: survival
+  #     DIFFICULTY: normal
+  #   ports:
+  #     - 19133:19132/udp
+  #   volumes:
+  #     - /data/minecraft2:/data
+  #   stdin_open: true
+  #   tty: true
