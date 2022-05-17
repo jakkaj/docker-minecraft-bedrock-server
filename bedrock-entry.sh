@@ -40,7 +40,10 @@ case ${VERSION^^} in
     VERSION=1.16.20.03
     ;;
   1.17)
-    VERSION=1.17.2.01
+    VERSION=1.17.10.04
+    ;;
+  1.18)
+    VERSION=1.18.31.04
     ;;
   LATEST)
     for a in data-bi-prtid data-platform; do

@@ -3,7 +3,7 @@ services:
   bds:
     restart: always
     build:
-        context: ../GitHub/docker-minecraft-bedrock-server
+        context: ../
         dockerfile: Dockerfile
     image: itzg/minecraft-bedrock-server
     environment:
