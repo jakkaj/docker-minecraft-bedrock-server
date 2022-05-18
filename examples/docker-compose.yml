@@ -16,19 +16,19 @@ services:
       - /data/minecraft:/data
     stdin_open: true
     tty: true
-  # bds2:
-  #   restart: unless-stopped
-  #   build:
-  #       context: ../
-  #       dockerfile: Dockerfile
-  #   image: itzg/minecraft-bedrock-server
-  #   environment:
-  #     EULA: "TRUE"
-  #     GAMEMODE: survival
-  #     DIFFICULTY: normal
-  #   ports:
-  #     - 19133:19132/udp
-  #   volumes:
-  #     - /data/minecraft2:/data
-  #   stdin_open: true
-  #   tty: true
+  bds2:
+    restart: unless-stopped
+    build:
+        context: ../
+        dockerfile: Dockerfile
+    image: itzg/minecraft-bedrock-server
+    environment:
+      EULA: "TRUE"
+      GAMEMODE: survival
+      DIFFICULTY: normal
+    ports:
+      - 19133:19132/udp
+    volumes:
+      - /data/minecraft2:/data
+    stdin_open: true
+    tty: true
